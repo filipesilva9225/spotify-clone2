@@ -1,0 +1,13 @@
+services:
+  spotify-clone2:
+    container_name: spotify-clone2
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    image: spotify-clone2:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
